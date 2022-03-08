@@ -1,26 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import { Route, Switch,withRouter } from 'react-router-dom'
+import Posts from './Container/Posts/Posts';
+import PostDetails from './Container/Comments/Comments'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Switch>
+        <Route path='/' exact component={Posts} />
+        <Route path='/post/:postId' exact component={PostDetails} />
+      </Switch>
     </div>
   );
 }
 
-export default App;
+export default withRouter(App);

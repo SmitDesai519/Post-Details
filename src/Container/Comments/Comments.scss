@@ -1,0 +1,22 @@
+.Comments{
+    padding: 10px;
+    .page-title{
+        text-align: center;
+    }
+    .site-card-border-less-wrapper {
+        padding: 30px;
+        background: #ececec;
+        .post-grid{
+            background-color: white;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .Title{
+                padding: 10px;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+      }
+}
